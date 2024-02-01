@@ -37,6 +37,13 @@ python main.py --dataset cifar 10 --aux_out_dataset lsun_c --test_out_dataset ls
 
 "aux_out_dataset" determines the type of OOD data in the unlabeled wild data
 
+## Toy data
+Please execute the following in the command shell:
+```
+python toy_data.py  --N_id 1000  --circle_ood 1 --ood_rate 0.1 --no_conditional 1 --use_thres 1  --num_epochs 3
+```
+It will reproduce the figures in the paper. Feel free to adjust the number of data, training epochs, ood rates in the unlabeled data, etc.
+
 
 
 ## Limitations
