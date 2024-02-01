@@ -456,10 +456,10 @@ if __name__ == '__main__':
         se.rng = np.random.default_rng(args.seed)
         if args.load_full_classifier:
             if args.num_class == 10:
-                se.net.load_state_dict(torch.load('/afs/cs.wisc.edu/u/x/f/xfdu/workspace/ood_theory/pretrained/cifar10_wrn_pretrained_epoch_99.pt'))
+                se.net.load_state_dict(torch.load('./pretrained/cifar10_wrn_pretrained_epoch_99.pt'))
             else:
                 se.net.load_state_dict(torch.load(
-                    '/afs/cs.wisc.edu/u/x/f/xfdu/workspace/ood_theory/pretrained/cifar100_wrn_pretrained_epoch_99.pt'))
+                    './pretrained/cifar100_wrn_pretrained_epoch_99.pt'))
         else:
             se.net.load_state_dict(torch.load(args.dataset + '.pt'))
         se.net.eval()
@@ -528,10 +528,10 @@ if __name__ == '__main__':
         if args.load_full_classifier:
             if args.num_class == 10:
                 binary_classifier.load_state_dict(torch.load(
-                    '/afs/cs.wisc.edu/u/x/f/xfdu/workspace/ood_theory/pretrained/cifar10_wrn_pretrained_epoch_99.pt'))
+                    './pretrained/cifar10_wrn_pretrained_epoch_99.pt'))
             else:
                 binary_classifier.load_state_dict(torch.load(
-                    '/afs/cs.wisc.edu/u/x/f/xfdu/workspace/ood_theory/pretrained/cifar100_wrn_pretrained_epoch_99.pt'))
+                    './pretrained/cifar100_wrn_pretrained_epoch_99.pt'))
 
         else:
             binary_classifier.load_state_dict(torch.load(args.dataset + '.pt'))
